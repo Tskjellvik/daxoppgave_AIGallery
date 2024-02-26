@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -1rem;
+}
+.image-container {
+  width: calc(33.333% - 2rem);
+  margin: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s; /* Smoothly transition the size change */
+}
+.image-container:hover {
+  transform: scale(1.1); /* Increase the size by 10% */
+}
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.main-content {
+  max-width: 90%;
+  margin: auto;
+  padding: 2rem;
+}
+
+#main-content-image {
+  display: block;
+  max-width: 70%;
+  max-height: 70%;
+  margin: 0 auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.modal-content img {
+  display: block;
+  max-width: 60%;
+  max-height: 60%;
+  margin: 0 auto;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
